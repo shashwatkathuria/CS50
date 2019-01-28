@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+{% block main %}
+    <table class="table table-striped">
+        <ttitle><h5>HISTORY</h5></ttitle>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Number Of Shares</th>
+                <th>Price Per Share</th>
+                <th>Total Price</th>
+                <th>Type</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in rows %}
+                <tr>
+                    <td>{{ row.symbol }}</td>
+                    <td>{{ row.noofshares }}</td>
+                    <td>{{ row.pricepershare }}</td>
+                    <td>{{ row.totalprice }}</td>
+                    <td>{{ row.type }}</td>
+                    <td>{{ row.time }}</td>
+                </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <p>        </p>
+
+{% endblock %}

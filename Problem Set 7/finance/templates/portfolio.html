@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+{% block main %}
+    <table class="table table-striped">
+        <ttitle><h5>PORTFOLIO</h5></ttitle>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Number Of Shares</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in rows %}
+                <tr>
+                    <td>{{ row.symbol }}</td>
+                    <td>{{ row.noofshares }}</td>
+                </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <p>        </p>
+    <p><h6>CASH BALANCE={{cash}}</h6></p>
+
+{% endblock %}
